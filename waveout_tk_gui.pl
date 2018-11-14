@@ -1,8 +1,8 @@
-########################################################
+﻿######################################################
 #本次程序通过三个选项，产生不同的波形，并在三个波形混合#
 #之后播放3秒钟。其中3秒钟的控制采用play的循环播放标志。#
 #导致每一秒之间有个时间空隙，还未找到更好的解决办法.   #
-########################################################
+######################################################
 
 #!/usr/bin/perl -w
 use strict;
@@ -19,42 +19,42 @@ $main -> title('Sound');
 
 $top = $main -> Frame() -> pack(-side => 'top',-pady =>5);
 $top_1 = $top -> Frame(-relief => 'ridge',
-					 -borderwidth => 3
-					)->pack(-side => 'left',-padx => 5);
+		       -borderwidth => 3
+		       )->pack(-side => 'left',-padx => 5);
 my $value_1;
 my $scale_1 = $top_1 -> Scale(-orient => 'vertical',
-						   -from => 2000,
-						   -to => 200,
-						   -length => 400,
-						   -variable => \$value_1,
-						   )->pack(-side => 'top',-pady => 5);
+				-from => 2000,
+				-to => 200,
+				-length => 400,
+				-variable => \$value_1,
+				)->pack(-side => 'top',-pady => 5);
 my $wave_1;
 $top_1 -> Radiobutton(-text => 'sin',
-					  -value => 'sin_u',
-					  -variable => \$wave_1
-					  )->pack();
+			-value => 'sin_u',
+			-variable => \$wave_1
+			)->pack();
 $top_1 -> Radiobutton(-text => 'sqr',
-					  -value => 'sqr_u',
-					  -variable => \$wave_1
-					  )->pack();
+			-value => 'sqr_u',
+			-variable => \$wave_1
+			)->pack();
 $top_1 -> Radiobutton(-text => 'tri',
-					  -value => 'tri_u',
-					  -variable => \$wave_1
-					  )->pack();
+			-value => 'tri_u',
+			-variable => \$wave_1
+			)->pack();
 $top_1 -> Radiobutton(-text => 'saw',
-					  -value => 'saw_u',
-					  -variable => \$wave_1
-					  )->pack();
+			-value => 'saw_u',
+			-variable => \$wave_1
+			)->pack();
 my $enable_1 = 0;
 $top_1 -> Checkbutton(-text => 'Enable',
-					  -onvalue => 1,
-					  -offvalue => 0,
-					  -variable => \$enable_1
-					  )->pack();
+			-onvalue => 1,
+			-offvalue => 0,
+			-variable => \$enable_1
+			)->pack();
 #----------------------------------------------#		
 $top_2 = $top -> Frame(-relief => 'ridge',
-					 -borderwidth => 3
-					)->pack(-side => 'left',-padx => 5);
+			-borderwidth => 3
+			)->pack(-side => 'left',-padx => 5);
 my $value_2;
 my $scale_2 = $top_2 -> Scale(-orient => 'vertical',
 						   -from => 2000,
@@ -64,69 +64,69 @@ my $scale_2 = $top_2 -> Scale(-orient => 'vertical',
 						   )->pack(-side => 'top',-pady => 5);
 my $wave_2;
 $top_2 -> Radiobutton(-text => 'sin',
-					  -value => 'sin_u',
-					  -variable => \$wave_2
-					  )->pack();
+			-value => 'sin_u',
+			-variable => \$wave_2
+			)->pack();
 $top_2 -> Radiobutton(-text => 'sqr',
-					  -value => 'sqr_u',
-					  -variable => \$wave_2
-					  )->pack();
+			-value => 'sqr_u',
+			-variable => \$wave_2
+			)->pack();
 $top_2 -> Radiobutton(-text => 'tri',
-					  -value => 'tri_u',
-					  -variable => \$wave_2
-					  )->pack();
+			-value => 'tri_u',
+			-variable => \$wave_2
+			)->pack();
 $top_2 -> Radiobutton(-text => 'saw',
-					  -value => 'saw_u',
-					  -variable => \$wave_2
-					  )->pack();
+			-value => 'saw_u',
+			-variable => \$wave_2
+			)->pack();
 my $enable_2 = 0;
 $top_2 -> Checkbutton(-text => 'Enable',
-					  -onvalue => 1,
-					  -offvalue => 0,
-					  -variable => \$enable_2
-					  )->pack();					
+			-onvalue => 1,
+			-offvalue => 0,
+			-variable => \$enable_2
+			)->pack();					
 #--------------------------------------------#					
 $top_3 = $top -> Frame(-relief => 'ridge',
-					   -borderwidth => 3
-					   )->pack(-side => 'left',-padx => 5);
+		       -borderwidth => 3
+		       )->pack(-side => 'left',-padx => 5);
 my $value_3;
 my $scale_3 = $top_3 -> Scale(-orient => 'vertical',
-						   -from => 2000,
-						   -to => 200,
-						   -length => 400,
-						   -variable => \$value_3,
-						   )->pack(-side => 'top',-pady => 5);					
+			      -from => 2000,
+			      -to => 200,
+			      -length => 400,
+			      -variable => \$value_3,
+			      )->pack(-side => 'top',-pady => 5);					
 my $wave_3;
 $top_3 -> Radiobutton(-text => 'sin',
-					  -value => 'sin_u',
-					  -variable => \$wave_3
-					  )->pack();
+		      -value => 'sin_u',
+		      -variable => \$wave_3
+		      )->pack();
 $top_3 -> Radiobutton(-text => 'sqr',
-					  -value => 'sqr_u',
-					  -variable => \$wave_3
-					  )->pack();
+		      -value => 'sqr_u',
+		      -variable => \$wave_3
+		      )->pack();
 $top_3 -> Radiobutton(-text => 'tri',
-					  -value => 'tri_u',
-					  -variable => \$wave_3
-					  )->pack();
+		      -value => 'tri_u',
+		      -variable => \$wave_3
+		      )->pack();
 $top_3 -> Radiobutton(-text => 'saw',
-					  -value => 'saw_u',
-					  -variable => \$wave_3
-					  )->pack();
+		      -value => 'saw_u',
+		      -variable => \$wave_3
+		      )->pack();
 my $enable_3 = 0;
 $top_3 -> Checkbutton(-text => 'Enable',
-					  -onvalue => 1,
-					  -offvalue => 0,
-					  -variable => \$enable_3
-					  )->pack();					
+		      -onvalue => 1,
+		      -offvalue => 0,
+		      -variable => \$enable_3
+		      )->pack();					
 #-------------------------------------------------#	
 $bottom_u = $main -> Frame() -> pack(-side => 'bottom',-pady => 5);
 $bottom_u -> Button(-text => 'Play',
-			        -command => \&play
-			        )->pack(-side => 'left');	
+		    -command => \&play
+		    )->pack(-side => 'left');	
 $bottom_u -> Button(-text => 'Quit',
-					-command => sub{exit}
-					)->pack(-side => 'right');	
+		    -command => sub{exit}
+		    )->pack(-side => 'right');	
 $main -> MainLoop;
 
 
