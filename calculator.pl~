@@ -8,7 +8,7 @@ $main->title('calculation');
 my $flag = 0;
 my $expression = '0';
 
-my $Screen = $main->Entry(-width=>40,-state=>'disabled',-textvariable=>\$expression,-justify=>'center') -> grid(-row=>0,-column=>0,-columnspan=>4,-sticky=>'nwse');
+my $Screen = $main->Entry(-width=>40,-state=>'disabled',-textvariabl=>\$expression,-justify=>'center') -> grid(-row=>0,-column=>0,-columnspan=>4,-sticky=>'nwse');
 my $Delete = $main->Button(-text=>'<-',-command=>sub{$expression = substr($expression,0,length($expression)-1);
 						     if($expression eq ''){
 							     $flag = 0;$expression = '0';
