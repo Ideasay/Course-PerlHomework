@@ -5,3 +5,5 @@
 ![waveout_gui](https://github.com/Ideasay/Perl_homework/blob/master/graph/gui_waveout.png)
 ## [calculator.pl](https://github.com/Ideasay/Perl_homework/blob/master/calculator.pl)<br>
 ![calculator](https://github.com/Ideasay/Perl_homework/blob/master/graph/calculator.png)
+## [Myguess.pl](https://github.com/Ideasay/Perl_homework/blob/master/Myguess.pl)<br>
+![myguess](https://github.com/Ideasay/Perl_homework/blob/master/graph/myguess.pl.png)
